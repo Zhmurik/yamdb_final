@@ -1,5 +1,7 @@
 # Описание проекта YaMDb
 
+![buld status](https://github.com/zhmurik/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
+
 Проект YaMDb - это сообщество, где каждый может разместить отзывы (Review) на произведения (Titles). Произведения могут быть разных категории: “Музыка”, “Фильмы”, “Книги”. Список категорий (Category) может быть расширен администратором. 
 
 Каждому новому произведению можно присвоить жанр (Genre) из списка предустановленных в интерфейсе. Так же у администратора есть возможность создавать новые жанры. 
@@ -68,7 +70,3 @@ docker-compose exec web python manage.py import all
 ```bash
 docker pull azhmurkova/api_yamdb:latest
 ```
-
-##
-
-![buld status](https://github.com/zhmurik/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
