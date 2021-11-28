@@ -106,6 +106,7 @@ class UsersViewSet(viewsets.ModelViewSet):
             return self.retrieve(request)
         if request.method == 'PATCH':
             return self.update(request, partial=True)
+        return None
 
 
 class CategoryViewSet(CreateListDestroyViewSet):
@@ -157,8 +158,7 @@ class CommentViewSet(viewsets.ModelViewSet):
     def get_review(self):
         title_id = self.kwargs.get('title_id')
         review_id = self.kwargs.get('review_id')
-        review = get_object_or_404(Review, pk=review_id, title__pk=title_id)
-        return review
+        return get_object_or_404(Review, pk=review_id, title__pk=title_id)
 
     def perform_create(self, serializer):
         review = self.get_review()
