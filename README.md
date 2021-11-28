@@ -68,3 +68,7 @@ docker-compose exec web python manage.py import all
 ```bash
 docker pull azhmurkova/api_yamdb:latest
 ```
+
+##
+
+![buld status](https://github.com/zhmurik/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
