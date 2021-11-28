@@ -5,25 +5,21 @@ from django.core.exceptions import ValidationError
 from django.core.validators import validate_email
 from django.db.models import Avg
 from django.shortcuts import get_object_or_404
-
 from django_filters.rest_framework import DjangoFilterBackend
-
 from rest_framework import mixins, permissions, status, viewsets
 from rest_framework.decorators import action
 from rest_framework.filters import SearchFilter
 from rest_framework.pagination import PageNumberPagination
 from rest_framework.response import Response
-
 from rest_framework_simplejwt.tokens import RefreshToken
 
 from .filters import TitleFilter
 from .models import Category, Genre, Review, Title
 from .permissions import (IsAdmin, IsAdminOrReadOnly,
                           IsAuthorOrAdminOrModeratorOrReadOnly)
-from .serializers import (AuthSerializer,
-                          CategorySerializer, CommentSerializer,
-                          GenreSerializer, ReviewSerializer, TitleSerializer,
-                          UserSerializer)
+from .serializers import (AuthSerializer, CategorySerializer,
+                          CommentSerializer, GenreSerializer, ReviewSerializer,
+                          TitleSerializer, UserSerializer)
 
 User = get_user_model()
 
