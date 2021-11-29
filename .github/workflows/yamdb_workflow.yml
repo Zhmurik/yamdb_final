@@ -21,13 +21,8 @@ jobs:
 
     - name: Test with flake8 and django tests
       run: |
-        # запуск проверки проекта по flake8
         python -m flake8
         pytest
-#        # перейти в папку, содержащую manage.py - <корневая_папка>/<папка_проекта>/manage.py
-#        cd api_yamdb/
-#        # запустить написанные разработчиком тесты
-#        python manage.py test
 
   build_and_push_to_docker_hub:
     name: Push Docker image to Docker Hub
@@ -59,7 +54,6 @@ jobs:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USER }}
           key: ${{ secrets.SSH_KEY }}
-          # passphrase: ${{ secrets.PASSPHRASE }}
           script: |
             sudo docker pull azhmurkova/yamdb_final:latest
             sudo docker-compose stop
