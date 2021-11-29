@@ -40,8 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'django_filters',
-    'api_yamdb.api',
-    'api_yamdb.users',
+    'api',
+    'users',
 ]
 
 AUTH_USER_MODEL = 'users.User'
