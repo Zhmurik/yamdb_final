@@ -24,7 +24,7 @@ pytest-django==4.4.0      # via -r requirements.in
 pytest-pythonpath==0.7.3
 pytest==5.4.1             # via pytest-django
 pytz==2019.3              # via django
-psycopg2-binary==2.9.2
+#psycopg2-binary==2.9.2
 requests==2.23.0          # via -r requirements.in
 six==1.14.0               # via packaging
 sqlparse==0.3.1           # via django
