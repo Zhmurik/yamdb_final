@@ -3,7 +3,7 @@
 import django.contrib.auth.validators
 from django.db import migrations, models
 import django.utils.timezone
-import users.models
+import api_yamdb.users.models
 
 
 class Migration(migrations.Migration):
@@ -40,7 +40,7 @@ class Migration(migrations.Migration):
                 'abstract': False,
             },
             managers=[
-                ('objects', users.models.UserManager()),
+                ('objects', api_yamdb.users.models.UserManager()),
             ],
         ),
     ]
