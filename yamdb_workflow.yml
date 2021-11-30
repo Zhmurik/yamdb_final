@@ -1,3 +1,7 @@
+# Этот файл нужен, потому что тесты проверяют на наличие файла yamdb_workflow.yml
+# в базовой директории тестов (см тест test_yamdb_yml.py)
+# is_yaml = yaml in os.listdir(settings.BASE_DIR)
+# а гитхабу нужен файл в .github/workflows/yamdb_workflow.yml
 name: Django-app workflow
 
 on: [push]
